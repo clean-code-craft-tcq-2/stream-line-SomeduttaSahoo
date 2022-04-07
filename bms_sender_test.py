@@ -67,7 +67,7 @@ class BMSSenderTest(unittest.TestCase):
             self.assertFalse(bms_input.is_stream_parameters_valid(stream_parameter[0], stream_parameter[1]))
 
     def test_checks_if_input_is_valid(self):
-        self.assertEqual(bms_input.is_input_valid("local_database", "console", self.bms_parameters_with_range, 1, 15),
+        self.assertEqual(bms_input.is_input_valid("local_database", "console", self.bms_parameters_with_range, 1, 50),
                          'VALID_INPUT')
         self.assertEqual(bms_input.is_input_valid("local_database", "console", self.bms_parameters_with_range, None, 0),
                          'INVALID_INPUT')
